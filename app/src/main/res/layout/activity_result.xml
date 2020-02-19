@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/resultBG"
+    tools:context=".activities.ResultActivity">
+
+
+    <TextView
+        android:id="@+id/fieldText"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/meText"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/fieldText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/handLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meText">
+
+        <TextView
+            android:id="@+id/resultTextAgari"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/agari"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toTopOf="@id/imageAgari"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/imageAgari"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <miyazawa.mahjong.HandImageListView
+            android:id="@+id/imageAgari"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/resultTextAgari" />
+
+
+        <miyazawa.mahjong.HandImageListView
+            android:id="@+id/imageMenzen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="0"
+            app:layout_constraintLeft_toRightOf="@id/imageAgari"
+            app:layout_constraintRight_toLeftOf="@id/imageNaki1"
+            app:layout_constraintTop_toBottomOf="@id/resultTextAgari"/>
+
+        <miyazawa.mahjong.HandImageListView
+            android:id="@+id/imageNaki1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="0"
+            app:layout_constraintLeft_toRightOf="@id/imageMenzen"
+            app:layout_constraintRight_toLeftOf="@id/imageNaki2"
+            app:layout_constraintTop_toBottomOf="@id/resultTextAgari"/>
+
+        <miyazawa.mahjong.HandImageListView
+            android:id="@+id/imageNaki2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="0"
+            app:layout_constraintLeft_toRightOf="@id/imageNaki1"
+            app:layout_constraintRight_toLeftOf="@id/imageNaki3"
+            app:layout_constraintTop_toBottomOf="@id/resultTextAgari"/>
+
+        <miyazawa.mahjong.HandImageListView
+            android:id="@+id/imageNaki3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="0"
+            app:layout_constraintLeft_toRightOf="@id/imageNaki2"
+            app:layout_constraintRight_toLeftOf="@id/imageNaki4"
+            app:layout_constraintTop_toBottomOf="@id/resultTextAgari"/>
+
+        <miyazawa.mahjong.HandImageListView
+            android:id="@+id/imageNaki4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="0"
+            app:layout_constraintLeft_toRightOf="@id/imageNaki3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/resultTextAgari"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/handText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/scoreText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/configButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="条件設定"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/meText" />
+
+    <Button
+        android:id="@+id/detailButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="詳細"
+        app:layout_constraintRight_toLeftOf="@id/configButton"
+        app:layout_constraintTop_toTopOf="@+id/configButton" />
+
+    <fragment
+        android:id="@+id/resultDetailFragment"
+        android:name="miyazawa.mahjong.fragments.ResultDetailFragment"
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        tools:layout="@layout/fragment_result_detail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meText" />
+
+    <fragment
+        android:id="@+id/resultConfigureFragment"
+        android:name="miyazawa.mahjong.fragments.ResultActivityFragment"
+        android:visibility="visible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout="@layout/fragment_result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

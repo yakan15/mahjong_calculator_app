@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ResultActivityFragment"
+    tools:showIn="@layout/activity_result">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.85"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:visibility="gone"
+        android:id="@+id/switchDoubleYakuman"
+        style="@style/ResultConfigSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ダブル役満"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switchTsumo"
+        style="@style/ResultConfigSwitch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ツモ"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="場風"
+        android:layout_marginTop="20dp"
+        style="@style/ResultConfigSwitch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/switchTsumo"
+        app:layout_constraintRight_toRightOf="@id/radioField"
+        app:layout_constraintBottom_toBottomOf="@id/radioField"/>
+
+    <RadioGroup
+        android:id="@+id/radioField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/field"
+        android:checkedButton="@id/radioFieldEast"
+        app:layout_constraintTop_toBottomOf="@id/textField"
+        app:layout_constraintLeft_toLeftOf="@id/switchTsumo"
+        >
+
+        <RadioButton
+            style="@style/ResultConfigSwitchText"
+            android:id="@+id/radioFieldEast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/east" />
+
+        <RadioButton
+            style="@style/ResultConfigSwitchText"
+            android:id="@+id/radioFieldSouth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/south" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textMe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="自風"
+        android:layout_marginTop="20dp"
+        style="@style/ResultConfigSwitch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/radioMe"
+        app:layout_constraintRight_toRightOf="@id/radioMe"
+        app:layout_constraintBottom_toBottomOf="@id/radioField"/>
+
+<RadioGroup
+        android:id="@+id/radioMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/me"
+        android:layout_marginLeft="30dp"
+        android:checkedButton="@id/radioMeSouth"
+        app:layout_constraintStart_toEndOf="@id/radioField"
+        app:layout_constraintTop_toTopOf="@id/radioField"
+    >
+
+        <RadioButton
+            android:id="@+id/radioMeEast"
+            style="@style/ResultConfigSwitchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/east" />
+
+        <RadioButton
+            android:id="@+id/radioMeSouth"
+            style="@style/ResultConfigSwitchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/south" />
+
+        <RadioButton
+            android:id="@+id/radioMeWest"
+            style="@style/ResultConfigSwitchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/west" />
+
+        <RadioButton
+            android:id="@+id/radioMeNorth"
+            style="@style/ResultConfigSwitchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/north" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textRiich"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="立直"
+        android:layout_marginTop="20dp"
+        style="@style/ResultConfigSwitch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/radioRiich"
+        app:layout_constraintRight_toRightOf="@id/radioRiich"
+        app:layout_constraintBottom_toBottomOf="@id/radioField"/>
+
+    <RadioGroup
+        android:id="@+id/radioRiich"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/radioRiichNo"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toEndOf="@id/radioMe"
+        app:layout_constraintTop_toTopOf="@id/radioMe"
+        app:layout_constraintRight_toLeftOf="@id/radioBonus"
+        >
+
+        <RadioButton
+            style="@style/ResultConfigSwitchText"
+            android:id="@+id/radioRiichNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="なし" />
+
+        <RadioButton
+            style="@style/ResultConfigSwitchText"
+            android:id="@+id/radioRiichSingle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="立直" />
+
+        <RadioButton
+            style="@style/ResultConfigSwitchText"
+            android:id="@+id/radioRiichDouble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ダブル立直" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textBonus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="嶺上/槍槓/海底"
+        android:layout_marginTop="20dp"
+        style="@style/ResultConfigSwitch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/radioBonus"
+        app:layout_constraintBottom_toBottomOf="@id/radioField"/>
+
+    <RadioGroup
+        android:id="@+id/radioBonus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/radioBonusNo"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintLeft_toRightOf="@id/radioRiich"
+        app:layout_constraintRight_toRightOf="@id/textBonus"
+        app:layout_constraintTop_toTopOf="@id/radioRiich"
+        >
+
+        <RadioButton
+            style="@style/ResultConfigSwitchText"
+            android:id="@+id/radioBonusNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="なし" />
+
+        <RadioButton
+            style="@style/ResultConfigSwitchText"
+            android:id="@+id/radioBonusRinshan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="嶺上開花" />
+
+        <RadioButton
+            style="@style/ResultConfigSwitchText"
+            android:id="@+id/radioBonusChankan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="槍槓" />
+
+        <RadioButton
+            style="@style/ResultConfigSwitchText"
+            android:id="@+id/radioBonusHaitei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="海底・河底" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textDora"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ドラ枚数"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        style="@style/ResultConfigSwitch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/textBonus"
+        app:layout_constraintBottom_toBottomOf="@id/radioField"/>
+
+    <Switch
+        android:id="@+id/switchIppatsu"
+        style="@style/ResultConfigSwitch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="一発"
+        app:layout_constraintBottom_toBottomOf="@+id/radioBonus"
+        app:layout_constraintLeft_toLeftOf="@id/radioRiich"
+        app:layout_constraintRight_toRightOf="@id/radioRiich"
+        app:layout_constraintTop_toBottomOf="@id/radioRiich" />
+
+    <NumberPicker
+        android:id="@+id/numberPickerDora"
+        style="@style/ResultConfigSwitchText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#888888"
+        android:layout_marginLeft="30dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintLeft_toRightOf="@id/radioBonus"
+        app:layout_constraintRight_toRightOf="@id/textDora"
+        app:layout_constraintBottom_toBottomOf="@id/radioBonus"
+        app:layout_constraintTop_toTopOf="@id/radioBonus" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".activities.CameraActivity">
+
+<!--        app:layout_constraintRight_toLeftOf="@id/side"-->
+<TextureView
+    android:id="@+id/textureView"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:text="Hello World!"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintDimensionRatio="H,3:4"
+    app:layout_constraintTop_toTopOf="parent" />
+
+
+<TextView
+    android:id="@+id/textNaki"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:text="@string/camera_naki"
+    android:textSize="30sp"
+    android:textColor="@color/clearLine"
+    android:background="@drawable/camera"
+    android:gravity="center"
+    app:layout_constraintVertical_weight="1"
+    app:layout_constraintVertical_chainStyle="spread"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@id/side"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/textAgari"/>
+
+<TextView
+    android:id="@+id/textAgari"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:gravity="center"
+    android:text="@string/camera_agari"
+    android:textColor="@color/clearLine"
+    android:textSize="20sp"
+    android:background="@drawable/camera"
+    app:layout_constraintVertical_weight="1"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintVertical_chainStyle="spread"
+    app:layout_constraintHorizontal_chainStyle="spread"
+    app:layout_constraintTop_toBottomOf="@id/textNaki"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@id/textMenzen"
+    app:layout_constraintBottom_toBottomOf="parent" />
+
+<TextView
+    android:id="@+id/textMenzen"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:gravity="center"
+    android:text="@string/camera_menzen"
+    android:textColor="@color/clearLine"
+    android:textSize="30sp"
+    android:background="@drawable/camera"
+    app:layout_constraintVertical_weight="1"
+    app:layout_constraintHorizontal_weight="4"
+    app:layout_constraintVertical_chainStyle="spread"
+    app:layout_constraintHorizontal_chainStyle="spread"
+    app:layout_constraintTop_toBottomOf="@id/textNaki"
+    app:layout_constraintLeft_toRightOf="@id/textAgari"
+    app:layout_constraintRight_toRightOf="@id/textureView"
+    app:layout_constraintBottom_toBottomOf="parent" />
+
+<View
+    android:id="@+id/side"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toRightOf="@id/textMenzen"
+    app:layout_constraintHorizontal_weight="0.8"
+    app:layout_constraintHorizontal_chainStyle="spread"
+    />
+
+<View
+    android:id="@+id/padding1"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintVertical_chainStyle="spread"
+    app:layout_constraintVertical_weight="2"
+    app:layout_constraintRight_toRightOf="@id/side"
+    app:layout_constraintLeft_toLeftOf="@id/side"
+    app:layout_constraintTop_toTopOf="@id/side"
+    app:layout_constraintBottom_toTopOf="@id/buttonShutter"
+    />
+
+<Button
+    android:id="@+id/buttonShutter"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:text="@string/button_shutter"
+    app:layout_constraintVertical_weight="1"
+    app:layout_constraintBottom_toTopOf="@id/buttonText"
+    app:layout_constraintLeft_toLeftOf="@id/side"
+    app:layout_constraintRight_toRightOf="@id/side"
+    app:layout_constraintTop_toBottomOf="@id/padding1" />
+
+<Button
+    android:id="@+id/buttonText"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:text="@string/button_text_on"
+    android:textSize="10sp"
+    app:layout_constraintVertical_weight="1"
+    app:layout_constraintBottom_toTopOf="@id/padding2"
+    app:layout_constraintLeft_toLeftOf="@id/side"
+    app:layout_constraintRight_toRightOf="@id/side"
+    app:layout_constraintTop_toBottomOf="@id/buttonShutter" />
+
+<View
+    android:id="@+id/padding2"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintVertical_weight="2"
+    app:layout_constraintRight_toRightOf="@id/side"
+    app:layout_constraintLeft_toLeftOf="@id/side"
+    app:layout_constraintTop_toBottomOf="@id/buttonText"
+    app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+<include
+    layout="@layout/content_camera"
+    tools:layout_editor_absoluteX="-120dp"
+    tools:layout_editor_absoluteY="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

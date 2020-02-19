@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="@layout/activity_result"
+    tools:context=".fragments.ResultDetailFragment">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/resultBG"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/handDetailLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintVertical_weight="2"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/handDetail"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/textHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="符"
+            android:textSize="12sp"
+            android:background="@drawable/underline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageDetailHand1"
+            app:layout_constraintRight_toLeftOf="@id/imageDetailHand1"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <miyazawa.mahjong.HandImageWithTextListView
+            android:id="@+id/imageDetailHand1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/subScoreText1"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/textHeader"
+            app:layout_constraintRight_toLeftOf="@id/imageDetailHand2"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/subScoreText1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:background="@drawable/underline"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/imageDetailHand1"
+            app:layout_constraintRight_toRightOf="@id/imageDetailHand1"
+            app:layout_constraintTop_toBottomOf="@id/imageDetailHand1" />
+
+        <miyazawa.mahjong.HandImageWithTextListView
+            android:id="@+id/imageDetailHand2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/subScoreText2"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/imageDetailHand1"
+            app:layout_constraintRight_toLeftOf="@id/imageDetailHand3"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/subScoreText2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/underline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/imageDetailHand2"
+            app:layout_constraintRight_toRightOf="@id/imageDetailHand2"
+            app:layout_constraintTop_toBottomOf="@id/imageDetailHand2" />
+
+        <miyazawa.mahjong.HandImageWithTextListView
+            android:id="@+id/imageDetailHand3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintBottom_toTopOf="@id/subScoreText3"
+            app:layout_constraintLeft_toRightOf="@id/imageDetailHand2"
+            app:layout_constraintRight_toLeftOf="@id/imageDetailHand4"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/subScoreText3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/underline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/imageDetailHand3"
+            app:layout_constraintRight_toRightOf="@id/imageDetailHand3"
+            app:layout_constraintTop_toBottomOf="@id/imageDetailHand3" />
+
+        <miyazawa.mahjong.HandImageWithTextListView
+            android:id="@+id/imageDetailHand4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/subScoreText4"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/imageDetailHand3"
+            app:layout_constraintRight_toLeftOf="@id/imageDetailHand5"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/subScoreText4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/underline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/imageDetailHand4"
+            app:layout_constraintRight_toRightOf="@id/imageDetailHand4"
+            app:layout_constraintTop_toBottomOf="@id/imageDetailHand4" />
+
+        <miyazawa.mahjong.HandImageWithTextListView
+            android:id="@+id/imageDetailHand5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/subScoreText5"
+            app:layout_constraintHorizontal_weight="0"
+            app:layout_constraintLeft_toRightOf="@id/imageDetailHand4"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/subScoreText5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/underline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/imageDetailHand5"
+            app:layout_constraintRight_toRightOf="@id/imageDetailHand5"
+            app:layout_constraintTop_toBottomOf="@id/imageDetailHand5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/handDetail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintVertical_weight="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/handDetailLayout">
+
+        <TextView
+            android:id="@+id/textHandHeader1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="役"
+            android:gravity="center_horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/textHandHeader2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/handList1"/>
+
+        <TextView
+            android:id="@+id/textHandHeader2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="符"
+            android:gravity="center_horizontal"
+            app:layout_constraintLeft_toRightOf="@id/textHandHeader1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/handList2"/>
+
+        <ListView
+            android:id="@+id/handList1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fadeScrollbars="false"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/handList2"
+            app:layout_constraintTop_toBottomOf="@id/textHandHeader1" />
+
+        <ListView
+            android:id="@+id/handList2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fadeScrollbars="false"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintBottom_toTopOf="@+id/textHandValueDetail"
+            app:layout_constraintLeft_toRightOf="@id/handList1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textHandHeader2" />
+
+        <TextView
+            android:id="@+id/textHandValueDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toBottomOf="@id/handList2"
+            app:layout_constraintLeft_toRightOf="@id/handList1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
